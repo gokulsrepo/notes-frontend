@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {format} from 'timeago.js'
 import axios from 'axios'
+import API_URL from '../../global'
 
 export default function Home() {
     const [notes, setNotes] = useState([])
     const [token, setToken] = useState('')
 
     const getNotes = async (token) =>{
-        const res = await axios.get('api/notes', {
+        const res = await axios.get(`${API_URL}/api/notes`, {
             headers:{Authorization: token}
         })
         setNotes(res.data)
@@ -25,13 +26,13 @@ export default function Home() {
     const deleteNote = async (id) =>{
         try {
             if(token){
-                await axios.delete(`api/notes/${id}`, {
+                await axios.delete(`${API_URL}api/notes/${id}`, {
                     headers: {Authorization: token}
                 })
                 getNotes(token)
             }
         } catch (error) {
-            window.location.href = "/";
+            window.location.href = API_URL;
         }
     }
 

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Login from './components/Login'
 import Notes from './components/Notes'
-
+import API_URL from './global';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false)
@@ -11,7 +11,7 @@ function App() {
     const checkLogin = async () =>{
       const token = localStorage.getItem('tokenStore')
       if(token){
-        const verified = await axios.get('/users/verify',{
+        const verified = await axios.get(`${API_URL}/users/verify`,{
           headers:{ Authorization: token}
         })
         console.log(verified)

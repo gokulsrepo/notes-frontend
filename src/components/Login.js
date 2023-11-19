@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios';
+import API_URL from '../global';
 
 export default function Login({setIsLogin}) {
     const [user, setUser] = useState({name: '',email: '',password: '' })
@@ -14,7 +15,7 @@ export default function Login({setIsLogin}) {
     const registerSubmit = async e =>{
         e.preventDefault()
         try {
-            const res = await axios.post('/users/register',{
+            const res = await axios.post(`${API_URL}/users/register`,{
                 username: user.name,
                 email: user.email,
                 password: user.password
@@ -29,7 +30,7 @@ export default function Login({setIsLogin}) {
     const loginSubmit = async e =>{
         e.preventDefault()
         try {
-            const res = await axios.post('/users/login',{
+            const res = await axios.post(`${API_URL}/users/login`,{
                 email: user.email,
                 password: user.password
             })

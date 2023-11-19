@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import {useHistory} from 'react-router-dom'
+import API_URL from '../../global'
 
 export default function CreateNote() {
     const [note, setNote] = useState({
@@ -26,14 +27,14 @@ export default function CreateNote() {
                     title, content, date
                 }
 
-                await axios.post('/api/notes', newNote, {
+                await axios.post(`${API_URL}/api/notes`, newNote, {
                     headers: {Authorization: token}
                 })
                 
-                return history.push('/')
+                return history.push(`${API_URL}`)
             }
         } catch (err) {
-            window.location.href = "/";
+            window.location.href = `${API_URL}`;
         }
     }
 
