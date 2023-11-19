@@ -32,7 +32,7 @@ export default function Home() {
                 getNotes(token)
             }
         } catch (error) {
-            window.location.href = API_URL;
+            window.location.href = "/";
         }
     }
 

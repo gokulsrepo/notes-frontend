@@ -31,10 +31,10 @@ export default function CreateNote() {
                     headers: {Authorization: token}
                 })
                 
-                return history.push(`${API_URL}`)
+                return history.push('/')
             }
         } catch (err) {
-            window.location.href = `${API_URL}`;
+            window.location.href = "/";
         }
     }
 
