@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+wimport React, {useState} from 'react'
 import axios from 'axios';
 import API_URL from '../global';
 
@@ -50,7 +50,6 @@ export default function Login({setIsLogin}) {
 
     return (
        <section className="login-page">
-        <h1>Notes</h1>
            <div className="login create-note">
                 <h2>Login</h2>
                 <form onSubmit={loginSubmit}>
