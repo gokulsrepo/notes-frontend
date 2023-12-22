@@ -67,8 +67,8 @@ export default function Login({setIsLogin}) {
                     <p>You don't have an account?
                         <span onClick={() => setOnLogin(true)}> Register Now</span>
                     </p>
-                    <h4>Made by Gokul</h4>
                     <h3>{err}</h3>
+                    <h4>Made by Gokul</h4>
                 </form>
            </div>
            <div className="register create-note" style={style}>
@@ -91,8 +91,8 @@ export default function Login({setIsLogin}) {
                     <p>You have an account?
                         <span onClick={() => setOnLogin(false)}> Login Now</span>
                     </p>
-                    <h4>Made by Gokul</h4>
                     <h3>{err}</h3>
+                    <h4>Made by Gokul</h4>
                 </form>
            </div>
        </section>
