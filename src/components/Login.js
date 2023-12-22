@@ -51,6 +51,7 @@ export default function Login({setIsLogin}) {
     return (
        <section className="login-page">
            <div className="login create-note">
+                <h1 id='title'>Notes</h1>
                 <h2>Login</h2>
                 <form onSubmit={loginSubmit}>
                     <input type="email" name="email" id="login-email"
@@ -66,10 +67,12 @@ export default function Login({setIsLogin}) {
                     <p>You don't have an account?
                         <span onClick={() => setOnLogin(true)}> Register Now</span>
                     </p>
+                    <h4>Made by Gokul</h4>
                     <h3>{err}</h3>
                 </form>
            </div>
            <div className="register create-note" style={style}>
+           <h1 id='title'>Notes</h1>
            <h2>Register</h2>
                 <form onSubmit={registerSubmit}>
                     <input type="text" name="name" id="register-name"
@@ -88,9 +91,11 @@ export default function Login({setIsLogin}) {
                     <p>You have an account?
                         <span onClick={() => setOnLogin(false)}> Login Now</span>
                     </p>
+                    <h4>Made by Gokul</h4>
                     <h3>{err}</h3>
                 </form>
            </div>
        </section>
+
     )
 }

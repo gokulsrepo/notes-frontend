@@ -173,12 +173,18 @@ a{
   min-height: 100vh;
 }
 .login-page h1{
-  color: rgb(14, 0, 0);
-  font-family: Tangerine;
+  color: rgb(255, 255, 255);
+  font-family: Zeyada;
   text-align: center;
-  padding-top: 10%;
   font-size: 80px;
 }
+
+.login-page h4{
+  color: wheat;
+  text-align: center;
+  padding-top: 5%;
+}
+
 .login input,
 .register input{
   margin-bottom: 15px;
@@ -195,6 +201,7 @@ a{
 .login-page h3{
   color: rgba(255, 255, 255, 0.533);
 }
+
 .login-page h3{
     text-align: center;
     text-transform: uppercase;
