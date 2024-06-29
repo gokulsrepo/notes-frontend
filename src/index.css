@@ -171,15 +171,15 @@ a{
   width: 100%;
   min-height: 100vh;
 }
+
 .login-page h1{
-  color: wheat;
-  font-family: Zeyada;
+  color: skyblue;
   text-align: center;
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .login-page h4{
-  color: wheat;
+  color: skyblue;
   text-align: center;
   padding-top: 5%;
 }
@@ -198,7 +198,7 @@ a{
 }
 .login-page h2,
 .login-page h3{
-  color: wheat;
+  color: skyblue;
 }
 
 .login-page h3{
@@ -208,7 +208,7 @@ a{
 }
 .login-page p{
   margin: 10px 0;
-  color: wheat;
+  color: skyblue;
 }
 .login-page span:hover{
   color: rgb(255, 255, 255);
